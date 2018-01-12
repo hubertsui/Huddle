@@ -522,7 +522,7 @@ Follow the steps below to add keyCredential to App Registrations of the Bot Web 
 
    You have collected most of the values in previous steps. For the rest parameters:
 
-   * **BotName**: the name of the bot.
+   * **Bot Name**: the name of the bot, will be used as Display Name of Bot Registration.
    * **Global Team**: the name of the global team.
    * **Source Code Repository**:  use the URL of the repository you just created -`https://github.com/<YourAccount>/Huddle`
    * **Source Code Branch**: mater
@@ -583,19 +583,17 @@ Follow the similar steps in the previous chapter to add the reply URL and admin 
 
 ### Customize and Configure the Bot
 
-1. Got to the Bot Channels Registration you created, then click **SETTINGS**.
+1. Go to the Bot Channels Registration you created, then click **SETTINGS**.
 
    ![](Images/bot-27.png)
    
 3. Click **Upload custom icon**, then select `/Files/HuddleBotIcon.png`.
 
-   ![](Images/bot-30.png) 
-
-4. Input the field **Display name**: Huddle Bot
-
    ![](Images/bot-31.png) 
 
 5. Click **Save**
+
+   ![](Images/bot-32.png) 
 
 ### Add Microsoft Teams Channel
 
@@ -619,7 +617,7 @@ Follow the similar steps in the previous chapter to add the reply URL and admin 
 
    ![](Images/bot-19.png)
 
-2. Click **->Test**, input `list ideas`, then send.
+2. Click **Test in Web Chat**, input `list ideas`, then send.
 
    ![](Images/bot-20.png)
 
