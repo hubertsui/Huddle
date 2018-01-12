@@ -76,6 +76,16 @@ export class DataService {
         return activeProject;
     }
 
+    public delete(actionUrl: string) {
+        let activeProject: ReplaySubject<any> = new ReplaySubject(1);
+        this._http.delete(actionUrl)
+            .subscribe(
+            (data) => activeProject.next(data.json()),
+            (error) => activeProject.error(error)
+            );
+        return activeProject;
+    }
+
     public getWithoutToken(actionUrl: string) {
         return this._http.get(actionUrl);
     }

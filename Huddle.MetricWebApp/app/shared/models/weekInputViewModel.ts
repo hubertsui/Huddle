@@ -1,23 +1,24 @@
-﻿import { IssueMetric } from './issueMetric';
-import { ReasonMetric } from './reasonMetric';
+﻿import { MetricValue } from './metricValue';
+import { ReasonValue } from './reasonValue';
 import { WeekDay } from './weekDay';
 import { Issue } from './issue';
 
 export class WeekInputViewModel {
     readonly inputLength: number = 7;
     weekDay: WeekDay;
-    isIssueMetric: boolean;
-    issueMetricArray = new Array<IssueMetric>();
-    reasonMetricArray = new Array<ReasonMetric>();
+    isMetricValue: boolean;
+    isWeeklyReason: boolean;
+    metricValueArray = new Array<MetricValue>();
+    reasonValueArray = new Array<ReasonValue>();
     constructor() {
         for (let i = 0; i < this.inputLength; i++){
-            this.issueMetricArray.push(new IssueMetric());
-            this.reasonMetricArray.push(new ReasonMetric());
+            this.metricValueArray.push(new MetricValue());
+            this.reasonValueArray.push(new ReasonValue());
         }
     }
     public resetIssue(issue: Issue) {
-        this.issueMetricArray.forEach(issueMetric => {
-            issueMetric.issue = issue;
-        });
+        //this.metricValueArray.forEach(metricValue => {
+        //    metricValue.issue = issue;
+        //});
     }
 }

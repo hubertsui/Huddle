@@ -2,6 +2,7 @@
 import { WeekDay } from '../shared/models/weekDay';
 import { WeekInputViewModel } from '../shared/models/weekInputViewModel';
 import { DateHelper } from '../utils/dateHelper';
+import { WeekSelectorService } from '../services/weekSelector.service';
 
 @Component({
     templateUrl: 'app/issue/weekInput.component.html',
@@ -10,12 +11,19 @@ import { DateHelper } from '../utils/dateHelper';
 })
 
 export class WeekInputComponent implements OnInit {
-    @Input('currentWeekDays') currentWeekDays: Array<Date>;
+    currentWeekDays: Array<Date>;
     @Input('rowIndex') rowIndex: number;
     @Input('weekInputViewModel') weekInputViewModel: WeekInputViewModel;
-    constructor() {
+    constructor(private weekSelectorService: WeekSelectorService) {
     }
     ngOnInit(): void {
-        
+        this.subscribeWeekSelector();
+        this.currentWeekDays = this.weekSelectorService.getCurrentWeekDays();
+    }
+    
+    subscribeWeekSelector() {
+        this.weekSelectorService.selectWeek.subscribe(weekDay => {
+            this.currentWeekDays = this.weekSelectorService.getCurrentWeekDays();
+        });
     }
 }
