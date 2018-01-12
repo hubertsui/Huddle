@@ -36,6 +36,8 @@
 * [Create App Registration for the MS Graph Connector](#create-app-registration-for-the-ms-graph-connector)
 * [Add keyCredential to App Registrations](#add-keycredential-to-app-registrations)
 
+[Register app for Bot Registration](#register-app-for-bot-registration)
+
 [Deploy Azure Components with ARM Template](#deploy-azure-components-with-arm-template)
 
 * [GitHub Authorize](#github-authorize)
@@ -46,7 +48,8 @@
 
 * [Add Reply URL and Admin Consent Bot Web App](#add-reply-url-and-admin-consent-bot-web-app)
 * [Add Reply URL and Admin Consent Metric Web App](#add-reply-url-and-admin-consent-metric-web-app)
-* [Update Bot Messaging Endpoint](#update-bot-messaging-endpoint)
+* [Customize and Configure the Bot](#customize-and-configure-the-bot)
+* [Add Microsoft Teams Channel](#add-microsoft-teams-channel)
 * [Verify the Bot](#verify-the-bot)
 * [Authorize Planner API Connection](#authorize-planner-api-connection)
 * [Authorize Teams API Connection](#authorize-teams-api-connection)
